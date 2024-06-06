@@ -47,7 +47,7 @@ def handle_message(event):
 
     if msg == '耽美介紹':
         user_state[user_id] = '耽美'
-        line_bot_api.reply_message(event.reply_token, TextSendMessage("請輸入想查詢的球員背號"))
+        line_bot_api.reply_message(event.reply_token, TextSendMessage("請輸入想要查詢的關鍵字?"))
     else:
         current_state = user_state[user_id]
         if current_state and msg in questions_answers[current_state]:
